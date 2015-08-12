@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1E434D4D-240F-41A8-A61D-9971052049AE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Freemwork</RootNamespace>
+    <AssemblyName>Freemwork</AssemblyName>
+    <DefaultLanguage>fr-FR</DefaultLanguage>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <NuGetPackageImportStamp>502d9b09</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Context.cs" />
+    <Compile Include="Playstates\GamePlayState.cs" />
+    <Compile Include="Playstates\NullPlayState.cs" />
+    <Compile Include="Playstates\PlayState.cs" />
+    <Compile Include="Primitives\EqualityComparer.cs" />
+    <Compile Include="Primitives\Graphic\Color.cs" />
+    <Compile Include="Primitives\Graphic\Interpolation.cs" />
+    <Compile Include="Primitives\Graphic\MirrorEffect.cs" />
+    <Compile Include="Primitives\Input\CommandMap.cs" />
+    <Compile Include="Primitives\Input\Commands\AccelerometerInputCommand.cs" />
+    <Compile Include="Primitives\Input\Commands\GyroscopeInputCommand.cs" />
+    <Compile Include="Primitives\Input\Commands\IInputCommand.cs" />
+    <Compile Include="Primitives\Input\Commands\InclinometerInputCommand.cs" />
+    <Compile Include="Primitives\Input\Commands\KeyInputCommand.cs" />
+    <Compile Include="Primitives\Input\Commands\MouseButtonInputCommand.cs" />
+    <Compile Include="Primitives\Input\Commands\MousePositionInputCommand.cs" />
+    <Compile Include="Primitives\Input\Commands\VirtualButtonInputCommand.cs" />
+    <Compile Include="Primitives\Input\Commands\VirtualJoystickInputCommand.cs" />
+    <Compile Include="Primitives\Input\Commands\XboxControllerButtonInputCommand.cs" />
+    <Compile Include="Primitives\Input\Commands\XboxControllerJoystickInputCommand.cs" />
+    <Compile Include="Primitives\Input\Devices\ControllerButton.cs" />
+    <Compile Include="Primitives\Input\Devices\ControllerJoystick.cs" />
+    <Compile Include="Primitives\Input\Devices\Key.cs" />
+    <Compile Include="Primitives\Input\Devices\MouseButton.cs" />
+    <Compile Include="Primitives\Input\Devices\Touch.cs" />
+    <Compile Include="Primitives\Input\InputAction.cs" />
+    <Compile Include="Primitives\Math\Curve\BezierCurve2D.cs" />
+    <Compile Include="Primitives\Math\Curve\Curve2D.cs" />
+    <Compile Include="Primitives\Math\Direction2D.cs" />
+    <Compile Include="Primitives\Math\Line2D.cs" />
+    <Compile Include="Primitives\Math\Matrix3x3.cs" />
+    <Compile Include="Primitives\Math\Matrix4x4.cs" />
+    <Compile Include="Primitives\Math\Orientation.cs" />
+    <Compile Include="Primitives\Math\Rectangle.cs" />
+    <Compile Include="Primitives\Math\Segment2D.cs" />
+    <Compile Include="Primitives\Math\Size2D.cs" />
+    <Compile Include="Primitives\Math\Transform2D.cs" />
+    <Compile Include="Primitives\Math\Vector2.cs" />
+    <Compile Include="Primitives\Math\Vector3.cs" />
+    <Compile Include="Primitives\Resources\IResource.cs" />
+    <Compile Include="Primitives\Resources\ISong.cs" />
+    <Compile Include="Primitives\Resources\ISound.cs" />
+    <Compile Include="Primitives\Resources\ISprite.cs" />
+    <Compile Include="Primitives\Resources\IText.cs" />
+    <Compile Include="Primitives\Resources\XNASong.cs" />
+    <Compile Include="Primitives\Resources\XNASound.cs" />
+    <Compile Include="Primitives\Resources\XNASprite.cs" />
+    <Compile Include="Primitives\Resources\XNAText.cs" />
+    <Compile Include="Primitives\Systems\Automaton\FiniteMultipleStateMachine.cs" />
+    <Compile Include="Primitives\Systems\Automaton\FiniteSingleStateMachine.cs" />
+    <Compile Include="Primitives\Systems\Automaton\FiniteTransition.cs" />
+    <Compile Include="Primitives\Systems\Automaton\IFiniteState.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Audio\IAudioService.cs" />
+    <Compile Include="Services\Audio\NullAudioService.cs" />
+    <Compile Include="Services\Audio\XNAAudioService.cs" />
+    <Compile Include="Services\Device\IDeviceService.cs" />
+    <Compile Include="Services\Device\NullDeviceService.cs" />
+    <Compile Include="Services\Device\PhoneDeviceService.cs" />
+    <Compile Include="Services\Device\RTDeviceService.cs" />
+    <Compile Include="Services\File\IFileService.cs" />
+    <Compile Include="Services\File\NullFileService.cs" />
+    <Compile Include="Services\File\RTFileService.cs" />
+    <Compile Include="Services\Graphics\IGraphicsService.cs" />
+    <Compile Include="Services\Graphics\NullGraphicsService.cs" />
+    <Compile Include="Services\Graphics\XNAGraphicsService.cs" />
+    <Compile Include="Services\Input\IInputService.cs" />
+    <Compile Include="Services\Input\NullInputService.cs" />
+    <Compile Include="Services\Input\XNAInputService.cs" />
+    <Compile Include="Services\INullService.cs" />
+    <Compile Include="Services\IService.cs" />
+    <Compile Include="Services\Resource\IResourceService.cs" />
+    <Compile Include="Services\Resource\NullResourceService.cs" />
+    <Compile Include="Services\Resource\XNAResourceService.cs" />
+    <Compile Include="Services\ServiceLocator.cs" />
+    <Compile Include="Utilities\Attributes\BoundsDefiningPropertyAttribute.cs" />
+    <Compile Include="Utilities\Attributes\NeededComponentAttribute.cs" />
+    <Compile Include="Utilities\Attributes\UncompatibleComponentAttribute.cs" />
+    <Compile Include="Utilities\Extensions.cs" />
+    <Compile Include="Utilities\Maths.cs" />
+    <Compile Include="Utilities\Tools.cs" />
+    <Compile Include="View\Camera2D.cs" />
+    <Compile Include="View\Strategies\ConstantCameraScrollingStrategy.cs" />
+    <Compile Include="View\Strategies\ConstantCameraRotatingStrategy.cs" />
+    <Compile Include="View\Strategies\ConstantCameraScalingStrategy.cs" />
+    <Compile Include="View\Strategies\ConstantZoomCameraScalingStrategy.cs" />
+    <Compile Include="View\Strategies\FollowCameraScrollingStrategy.cs" />
+    <Compile Include="View\Strategies\ICameraRotatingStrategy.cs" />
+    <Compile Include="View\Strategies\ICameraScalingStrategy.cs" />
+    <Compile Include="View\Strategies\ICameraScrollingStrategy.cs" />
+    <Compile Include="View\Strategies\NullCameraRotatingStrategy.cs" />
+    <Compile Include="View\Strategies\NullCameraScalingStrategy.cs" />
+    <Compile Include="View\Strategies\NullCameraScrollingStrategy.cs" />
+    <Compile Include="World\Objects\Components\Debugging\PropertyDisplayer.cs" />
+    <Compile Include="World\Objects\Components\Gameplay\DamageDealer.cs" />
+    <Compile Include="World\Objects\Components\Gameplay\Hitbox.cs" />
+    <Compile Include="World\Objects\Components\Gameplay\HitboxDependentComponent.cs" />
+    <Compile Include="World\Objects\Components\Gameplay\InstantKiller.cs" />
+    <Compile Include="World\Objects\Components\Gameplay\Lifespan.cs" />
+    <Compile Include="World\Objects\Components\Gameplay\TriggerableHitboxDependentComponent.cs" />
+    <Compile Include="World\Objects\Components\Graphics2D\CompositeSpriteHolder.cs" />
+    <Compile Include="World\Objects\Components\Graphics2D\Identity2D.cs" />
+    <Compile Include="World\Objects\Components\Graphics2D\LinearTranslator2D.cs" />
+    <Compile Include="World\Objects\Components\Graphics2D\Rotator2D.cs" />
+    <Compile Include="World\Objects\Components\Graphics2D\SpriteAnimator.cs" />
+    <Compile Include="World\Objects\Components\Graphics2D\SpriteHolder.cs" />
+    <Compile Include="World\Objects\Components\Graphics2D\SpriteOscillator.cs" />
+    <Compile Include="World\Objects\Components\Graphics2D\TextHolder.cs" />
+    <Compile Include="World\Objects\Components\IGameComponent.cs" />
+    <Compile Include="World\Objects\Components\Input\BasicController2D.cs" />
+    <Compile Include="World\Objects\Components\Misc\CustomBoundaries2D.cs" />
+    <Compile Include="World\Objects\Components\Misc\Unspawner.cs" />
+    <Compile Include="World\Objects\Components\UI\Cursor.cs" />
+    <Compile Include="World\Objects\Components\UI\VirtualButton.cs" />
+    <Compile Include="World\Objects\Components\UI\VirtualJoystick.cs" />
+    <Compile Include="World\Objects\GameObject.cs" />
+    <Compile Include="World\Worldspawn.cs" />
+    <Compile Include="XNAContext.cs" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
+    <VisualStudioVersion>12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <Import Project="..\packages\MonoGame.Binaries.3.2.2-alpha\build\netcore\MonoGame.Binaries.targets" Condition="Exists('..\packages\MonoGame.Binaries.3.2.2-alpha\build\netcore\MonoGame.Binaries.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Activez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est le suivant : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MonoGame.Binaries.3.2.2-alpha\build\netcore\MonoGame.Binaries.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MonoGame.Binaries.3.2.2-alpha\build\netcore\MonoGame.Binaries.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
