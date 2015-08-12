@@ -236,5 +236,5 @@ This feature might reveal itself useful when you have a big scene, with a lot of
 To chose the cell size of the grid, edit the **Worldspawn**._CellSize2D_. The cells must not have neither a null width, nor a null height.
 
 Sometimes, you might encounter problems with objects that have a non-neglectable size in regard of the cell size.
-![http://downloads.ilambda.me/freemwork/partitionningIssue.png]
+![partitionning problem](http://downloads.ilambda.me/freemwork/partitionningIssue.png)
 The main issue is that your item will be considered as if it was in the cell where its position is. To tackle this issue, you must use the **GameObject**._PartitionningBoundsComponent_ : some components (**SpriteHolder**, **Hitbox**, ..) are tagged with the **BoundsDefiningProperty** attribute. Set the **GameObject**._PartitionningBoundsComponent_ property to the type of the component you want to give bounds to the game object. The space partitionning algorithm will understand, and will count your object in all the cells he should.
